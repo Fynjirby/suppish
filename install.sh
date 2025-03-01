@@ -8,6 +8,7 @@ echo "The following things will be installed & updated:
 - python
 - lazygit, bat, thefuck, yazi, openssl
 - ghostty & zed
+- raycast
 - brave browser
 - cloudflare-warp
 - mos
@@ -16,6 +17,7 @@ echo "The following things will be installed & updated:
 - qbittorrent
 - balenaetcher
 - appcleaner
+- uninstallpkg
 - shottr
 - unzip
 - ipherr
@@ -68,20 +70,21 @@ eval $(thefuck --alias)
 # ALIASES
 alias lpreset="defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock"
 alias python="python3"
-alias pip="pip3"
 alias py="python3"
 alias py3="python3"
 alias code="zed"
 alias edit="zed"
 alias clr="clear"
 alias browser="open -a Brave\ Browser"
-' > $HOME/.zshrc
+alias lg="lazygit"
+alias fck="fuck"
+alias shit="fuck"' > $HOME/.zshrc
 
 defaults write com.apple.dock autohide-delay -float 0; killall Dock
 # defaults delete com.apple.dock autohide-delay; killall Dock
 
 brew install node zsh git zsh-autosuggestions zsh-syntax-highlighting lazygit bat thefuck yazi openssl python
-brew install --cask brave-browser ghostty zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr
+brew install --cask brave-browser ghostty zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr uninstallpkg raycast
 brew cleanup
 
 npm install -g npm unzip bun ipherr wutdepc
@@ -124,3 +127,9 @@ echo '{
     "dark": "One Dark"
   }
 }' > ~/.config/zed/settings.json
+
+#~/Library/Application Support/com.mitchellh.ghostty/config
+echo 'font-size = 16
+maximize = true
+focus-follows-mouse = true
+keybind = global:cmd+grave_accent=toggle_quick_terminal' > ~/Library/Application\ Support/com.mitchellh.ghostty/config

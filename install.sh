@@ -38,6 +38,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 eval $(/opt/homebrew/bin/brew shellenv)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/themes/powerlevel10k"
 
+# ~/.zshrc
 echo 'export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -128,7 +129,7 @@ echo '{
   }
 }' > ~/.config/zed/settings.json
 
-#~/Library/Application Support/com.mitchellh.ghostty/config
+# ~/Library/Application Support/com.mitchellh.ghostty/config
 echo 'font-size = 16
 maximize = true
 focus-follows-mouse = true

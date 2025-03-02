@@ -9,6 +9,36 @@ if fynjirby.dev domain is blocked or unavailable in your country try this comman
 ```zsh
 curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/install.sh | zsh
 ```
+#
+also there are 2 other files in [config/](https://github.com/fynjirby/suppish/tree/main/config)
+after running this files it will write zed, ghostty, zshrc configs
+- zed_config.sh
+```zsh
+curl -sSL https://suppish.fynjirby.dev/config/zed_config.sh | zsh
+```
+or
+```zsh
+curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/zed_config.sh | zsh
+```
+
+- ghostty_config.sh
+```zsh
+curl -sSL https://suppish.fynjirby.dev/config/ghostty_config.sh | zsh
+```
+or
+```zsh
+curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/ghostty_config.sh | zsh
+```
+
+- zshrc.sh
+```zsh
+curl -sSL https://suppish.fynjirby.dev/config/zshrc.sh | zsh
+```
+or
+```zsh
+curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/zshrc.sh | zsh
+```
+#
 ### The following things will be installed & updated after 7 seconds timeout:
 - zsh with Oh My Zsh in Powerlevel10k theme
 - zsh plugins: git, zsh-syntax-highlighting, zsh-autosuggestions, brew

@@ -2,8 +2,8 @@
 echo '{
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o-mini"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -30,6 +30,7 @@ echo '{
   "useTabs": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
+  "format_on_save": "on",
   "theme": {
     "mode": "system",
     "light": "One Light",

@@ -9,7 +9,7 @@ echo "The following things will be installed & updated:
 - lazygit, bat, thefuck, yazi, openssl
 - ghostty & zed
 - raycast
-- brave browser
+- google chrome
 - cloudflare-warp
 - mos
 - spotify
@@ -19,9 +19,11 @@ echo "The following things will be installed & updated:
 - appcleaner
 - uninstallpkg
 - shottr
+- speedtest
 - unzip
 - ipherr
 - wutdepc
+- tydid
 * Dock will hide faster on macOS"
 
 time_left=7
@@ -67,35 +69,41 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "/Users/egor/.bun/_bun" ] && source "/Users/egor/.bun/_bun"
 
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
 
 # ALIASES
 alias lpreset="defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock"
 alias python="python3"
+alias pip="pip3"
 alias py="python3"
 alias py3="python3"
 alias code="zed"
 alias edit="zed"
 alias clr="clear"
-alias browser="open -a Brave\ Browser"
+alias browser="open -a Google\ Chrome.app"
 alias lg="lazygit"
 alias fck="fuck"
-alias shit="fuck"' > $HOME/.zshrc
+alias shit="fuck"
+alias td="tydid"' > $HOME/.zshrc
 
 defaults write com.apple.dock autohide-delay -float 0; killall Dock
 # defaults delete com.apple.dock autohide-delay; killall Dock
 
 brew install node zsh git zsh-autosuggestions zsh-syntax-highlighting lazygit bat thefuck yazi openssl python
-brew install --cask brave-browser ghostty zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr uninstallpkg raycast
+brew install --cask google-chrome ghostty zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr uninstallpkg raycast
+brew tap teamookla/speedtest
+brew update
+brew install speedtest
 brew cleanup
 
-npm install -g npm unzip bun ipherr wutdepc
+npm install -g npm unzip bun ipherr wutdepc tydid
 
 # ~/.config/zed/settings.json
 echo '{
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o-mini"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -122,6 +130,7 @@ echo '{
   "useTabs": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
+  "format_on_save": "on",
   "theme": {
     "mode": "system",
     "light": "One Light",

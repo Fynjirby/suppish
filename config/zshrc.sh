@@ -1,5 +1,4 @@
-# ~/.zshrc
-echo 'export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -27,16 +26,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "/Users/egor/.bun/_bun" ] && source "/Users/egor/.bun/_bun"
 
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
 
 # ALIASES
 alias lpreset="defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock"
 alias python="python3"
+alias pip="pip3"
 alias py="python3"
 alias py3="python3"
 alias code="zed"
 alias edit="zed"
 alias clr="clear"
-alias browser="open -a Brave\ Browser"
+alias browser="open -a Google\ Chrome.app"
 alias lg="lazygit"
 alias fck="fuck"
-alias shit="fuck"' > $HOME/.zshrc
+alias shit="fuck"
+alias td="tydid"

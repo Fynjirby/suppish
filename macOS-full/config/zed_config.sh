@@ -20,7 +20,6 @@ echo '{
     "wordWrap": "on",
     "autoClosingBrackets": "never",
     "autoClosingQuotes": "never",
-    "terminal": "ghostty"
   },
   "autosave": "on_focus_change",
   "insertSpaces": false,
@@ -31,6 +30,6 @@ echo '{
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "macOS Classic Dark"
   }
 }' > ~/.config/zed/settings.json

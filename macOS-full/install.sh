@@ -66,7 +66,6 @@ eval $(thefuck --alias)
 eval "$(starship init zsh)"
 
 # ALIASES
-alias lpreset="defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock"
 alias python="python3"
 alias pip="pip3"
 alias py="python3"
@@ -77,8 +76,7 @@ alias clr="clear"
 alias browser="open -a Google\ Chrome.app"
 alias lg="lazygit"
 alias fck="fuck"
-alias shit="fuck"
-alias td="tydid"' > $HOME/.zshrc
+alias shit="fuck"' > $HOME/.zshrc
 
 defaults write com.apple.dock autohide-delay -float 0; killall Dock
 # defaults delete com.apple.dock autohide-delay; killall Dock
@@ -90,7 +88,7 @@ brew update
 brew install speedtest
 brew cleanup
 
-npm install -g npm unzip bun ipherr wutdepc tydid
+npm install -g npm unzip bun ipherr wutdepc tydid pompom
 
 # ~/.config/zed/settings.json
 echo '{
@@ -114,10 +112,6 @@ echo '{
     "wordWrap": "on",
     "autoClosingBrackets": "never",
     "autoClosingQuotes": "never",
-    "terminal": "ghostty"
-  },
-  "shell": {
-    "program": "open -a Ghostty"
   },
   "autosave": "on_focus_change",
   "insertSpaces": false,
@@ -128,12 +122,6 @@ echo '{
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "macOS Classic Dark"
   }
 }' > ~/.config/zed/settings.json
-
-# ~/Library/Application Support/com.mitchellh.ghostty/config
-echo 'font-size = 16
-maximize = true
-focus-follows-mouse = true
-keybind = global:cmd+grave_accent=toggle_quick_terminal' > ~/Library/Application\ Support/com.mitchellh.ghostty/config

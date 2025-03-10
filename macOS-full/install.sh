@@ -1,6 +1,6 @@
 #!/bin/zsh
 echo "The following things will be installed & updated:
-- zsh with Oh My Zsh in Powerlevel10k theme
+- zsh with Oh My Zsh
 - zsh plugins: git, zsh-syntax-highlighting, zsh-autosuggestions, brew
 - homebrew
 - node.js + npm

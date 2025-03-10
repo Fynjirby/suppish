@@ -22,9 +22,6 @@ echo '{
     "autoClosingQuotes": "never",
     "terminal": "ghostty"
   },
-  "shell": {
-    "program": "open -a Ghostty"
-  },
   "autosave": "on_focus_change",
   "insertSpaces": false,
   "useTabs": true,

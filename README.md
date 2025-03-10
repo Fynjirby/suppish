@@ -17,7 +17,7 @@ curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/install.sh | z
 #
 
 also there are 2 other files in [config](https://github.com/fynjirby/suppish/tree/main/config)
-after running this files it will write zed, ghostty, zshrc configs
+after running this files it will write zed, zshrc configs
 
 - zed_config.sh
 <details>
@@ -31,22 +31,6 @@ or
 
 ```zsh
 curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/zed_config.sh | zsh
-```
-
-</details>
-
-- ghostty_config.sh
-<details>
-    <summary><strong>see commands for ghostty config installer</strong></summary>
-
-```zsh
-curl -sSL https://suppish.fynjirby.dev/config/ghostty_config.sh | zsh
-```
-
-or
-
-```zsh
-curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/ghostty_config.sh | zsh
 ```
 
 </details>
@@ -78,7 +62,9 @@ curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/zshrc.s
 - bun.js
 - python
 - lazygit, bat, thefuck, yazi, openssl
-- ghostty & zed
+- zed
+- nvim
+- iterm2
 - raycast
 - google chrome
 - cloudflare-warp
@@ -103,16 +89,16 @@ curl -sSL https://raw.githubusercontent.com/fynjirby/suppish/main/config/zshrc.s
 - modrinth
 - multipass
 - utm
+- pictogram
 
 ```zsh
-brew install --cask modrinth multipass utm
+brew install --cask modrinth multipass utm pictogram
 ```
 
 - vivaldi
 - vs code
-- pictogram
 - android-file-transfer
 
 ```zsh
-brew install --cask vivaldi visual-studio-code pictogram android-file-transfer
+brew install --cask vivaldi visual-studio-code android-file-transfer
 ```

@@ -12,7 +12,6 @@ source $HOME/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR="open -a Zed.app"
 export VISUAL="open -a Zed.app"
-export TERMINAL="open -a Ghostty.app"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"

@@ -7,7 +7,8 @@ echo "The following things will be installed & updated:
 - bun.js
 - python
 - lazygit, bat, thefuck, yazi, openssl
-- ghostty & zed
+- iterm2
+- zed + nvim
 - raycast
 - google chrome
 - cloudflare-warp
@@ -38,28 +39,21 @@ echo "\nLFG!"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval $(/opt/homebrew/bin/brew shellenv)
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/themes/powerlevel10k"
+curl -sS https://starship.rs/install.sh | sh
 
 # ~/.zshrc
 echo 'export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZSH_THEME="robbyrussell"
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions brew)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # EXPORTS
 export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR="open -a Zed.app"
 export VISUAL="open -a Zed.app"
-export TERMINAL="open -a Ghostty.app"
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -89,8 +83,8 @@ alias td="tydid"' > $HOME/.zshrc
 defaults write com.apple.dock autohide-delay -float 0; killall Dock
 # defaults delete com.apple.dock autohide-delay; killall Dock
 
-brew install node zsh git zsh-autosuggestions zsh-syntax-highlighting lazygit bat thefuck yazi openssl python
-brew install --cask google-chrome ghostty zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr uninstallpkg raycast
+brew install node zsh git zsh-autosuggestions zsh-syntax-highlighting lazygit bat thefuck yazi openssl python neovim
+brew install --cask google-chrome iterm2 zed cloudflare-warp mos spotify telegram qbittorrent balenaetcher appcleaner shottr uninstallpkg raycast
 brew tap teamookla/speedtest
 brew update
 brew install speedtest
